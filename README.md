@@ -9,11 +9,10 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 
 ```markdown
-Syntax highlighted code block
 
-# Examples of Learning
-## Header 2
-### Header 3
+
+<h1> Examples of Learning </h1?
+
 
 - Bulleted
 - List
