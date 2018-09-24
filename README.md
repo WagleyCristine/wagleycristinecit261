@@ -11,7 +11,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 ```markdown
 Syntax highlighted code block
 
-# Header 1
+# Examples of Learning
 ## Header 2
 ### Header 3
 
