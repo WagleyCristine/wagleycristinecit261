@@ -10,17 +10,46 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 
 ```markdown
 
+<!DOCTYPE HTML>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<title></title>
 
-<h1> Examples of Learning </h1?
+<script type="text/javascript">
+
+/* Input: 
+ * Processing: 
+ * Output: 
+ */
+
+function doit () {
+ var i = 0, limit = 5;
+while (i < limit) {
+    window.alert("Apple");
+    i += 2;
+}
 
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+</script>
+</head>
+
+<body>                      
+<p></p>
+ 
+
+<button type="button" onclick="doit()">!</button>
+<div id="outputDiv"></div>              
+</body>         
+</html>
+
+
+<h1> Examples of Learning </h1>
+
+
+
 
 [Link](url) and ![Image](src)
 ```
