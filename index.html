@@ -21,10 +21,7 @@
 
   
   <script type="text/javascript">
-/* Input: A person's name
- * Processing: Create a greeting for that person
- * Output: The greeting
- */
+
 function greetUser() {
     // This line prompts the user to type in his name.
     var name = window.prompt("Please enter your name");
@@ -41,6 +38,7 @@ function greetUser() {
   <!--Example of a Method --> 
   
   
+  <p id="demo"></p>
   
   <script>
     function radiohead (name, age){
@@ -64,6 +62,8 @@ function greetUser() {
     
       <body>
        <script>
+         document.getElementById("demo").innerHTML = numYears;
+
          document.write(thom.yearsInBand());
         </script>
         
