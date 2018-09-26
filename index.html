@@ -35,6 +35,23 @@ function greetUser() {
     window.alert(greeting);
 }
 </script>
+  
+  <!--Example of a Method --> 
+  <p id="demo"></p>
+  <script>
+    var person = {;
+    person.firstname = "Thom";
+    person.lastname = "Yorke";
+    person.age = 49;
+      fullName : function() {
+      return this.firstName + " " + this.lastName;
+    }
+};
+// Display data from the object:
+document.getElementById("demo").innerHTML = person.fullName();
+    </script>
+  
+  
   </head>
   
   
