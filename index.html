@@ -18,6 +18,8 @@
     </script>
     
     <!--Example of a Function-->
+  <h2>This is my function example. Click button and follow instructions.</h2>
+  
   <script type="text/javascript">
 /* Input: A person's name
  * Processing: Create a greeting for that person
@@ -37,18 +39,21 @@ function greetUser() {
 </script>
   
   <!--Example of a Method --> 
-  <p id="demo"></p>
+  <h2>This is my method example.</h2>
+  
+  
   <script>
-    var person = {;
-    firstname = "Thom";
-    lastname = "Yorke";
-    age = 49;
-      fullName : function() {
-      return this.firstName + " " + this.lastName;
+    function radiohead (name, age){
+      this.name = name;
+      this.age = "age";
+      this.yearsInBand = bandYears;
     }
-};
-// Display data from the object:
-document.getElementById("demo").innerHTML = person.fullName();
+      function bandYears (){
+        var numYears = this.age - 17;
+        return numYears;
+      }  
+    var person Thom = new radiohead ("Thom Yorke", 49);
+      
     </script>
   
   
@@ -58,6 +63,8 @@ document.getElementById("demo").innerHTML = person.fullName();
   
     
       <body>
+        document.write(thom.yearsInBand());
+        
          <button type="button" onclick="greetUser()">Hello</button>
         
       <style>
