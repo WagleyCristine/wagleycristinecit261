@@ -39,7 +39,7 @@ function greetUser() {
   
   
  
-  
+  <p id="test"></p>
   <script>
     function radiohead (name, age){
       this.name = name;
@@ -51,6 +51,9 @@ function greetUser() {
         return numYears;
       }  
     var Thom = new radiohead ("Thom Yorke", 49);
+    
+    document.getElementById("test").innerHTML =
+"It adds up to " + bandYears(); 
       
     </script>
   
