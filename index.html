@@ -11,14 +11,15 @@
     <!--This is my example of an object-->
   
   <p id= "sample"></p>
-     <script>
-    var person = new Object ();
-    person.firstname = "Thom";
-    person.lastname = "Yorke";
-    person.age = 49;
-       
-       document.getElementById("sample").innerHTML = person.firstName + " " + person.lastName " " + is " " + person.age;
+      <script>
+    var person = {
+   firstName : "Thom",
+   lastName : "Yorke",
+       };
+       document.getElementById("sample").innerHTML  = 
+         person.firstName + " " + person.lastName + " is the lead musician in the band Radiohead.";
     </script>
+    
     
     <!--Example of a Function-->
 
