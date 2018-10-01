@@ -31,7 +31,7 @@ function greetUser() {
     var name = window.prompt("Please enter your name");
 
     // Create a personalized greeting for the user.
-    var greeting =  name + ", welcome to my example page!.";
+    var greeting = "Hi there! " name + ", Have you heard of Radiohead!?.";
 
     // The next line causes the computer to display
     // a greeting to the user in a popup window.
@@ -69,27 +69,24 @@ function greetUser() {
     
       <body>
         
-          <p id="demo"></p>
-
-<script type="text/javascript"> 
-var person = {
-    firstName: "Thom",
-    lastName : "Yorke",
-    
-};
-person.name = function() {
-    return this.firstName + " " + this.lastName;
-};
-
-document.getElementById("demo").innerHTML =
-"Great music is made by " + person.name(); 
-
-        </script>
-        
+ <!-- Example of Inheritance and Instantiation -->      
        <script>
-         
+  <p id = "demo"></p>
+      <script>
+      function Album(name, year){
+      this.name = name;
+      this.year = year;
 
-         document.write(thom.yearsInBand());
+    }
+
+    // instances
+    var hail = new Album("Hail To The Thief", 2003);
+    var ok = new Album("OK Computer", 1997);
+    var bends = new Album("The Bends", 1995);
+
+    document.getElementById("demo").innerHTML =
+"My favorite album is " + hail.name + ". It came out in " + hail.year;
+         
         </script>
         
          <button type="button" onclick="greetUser()">Hello</button>
