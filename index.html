@@ -16,59 +16,7 @@
     </ul>
     <h1>Examples of Code Topics</h1>
     
-    <!--This is my example of an object-->
-  
-  <p id= "sample"></p>
-      <script>
-    var person = {
-   firstName : "Thom",
-   lastName : "Yorke",
-       };
-       document.getElementById("sample").innerHTML  = 
-         person.firstName + " " + person.lastName + " is the lead musician in the band Radiohead.";
-    </script>
-    
-    
-    <!--Example of a Function-->
-
-  
-  <script type="text/javascript">
-
-function greetUser() {
-    // This line prompts the user to type in his name.
-    var name = window.prompt("Please enter your name");
-
-    // Create a personalized greeting for the user.
-    var greeting = "Hi there " +  name  + ", have you heard of Radiohead?.";
-
-    // The next line causes the computer to display
-    // a greeting to the user in a popup window.
-    window.alert(greeting);
-}
-</script>
-  
-  <!--Example of a Method --> 
-  
-  
- 
-  <p id="test"></p>
-  <script>
-    function radiohead (name, age){
-      this.name = name;
-      this.age = age;
-      this.yearsInBand = bandYears;
-    }
-      function bandYears (){
-        var numYears = this.age - 17;
-        return numYears;
-      }  
-    var Thom = new radiohead ("Thom Yorke", 49);
-    
-    document.getElementById("test").innerHTML =
-"The band formed " + Thom.yearsInBand() + " years ago and was originally called 'On a Friday'. "; 
-      
-    </script>
-  
+   
   
   </head>
   
@@ -79,26 +27,7 @@ function greetUser() {
         
  <!-- Example of Inheritance and Instantiation -->      
        
-  <p id = "demo"></p>
-      <script>
-      function Album(name, year){
-      this.name = name;
-      this.year = year;
-
-    }
-
-    // instances
-    var hail = new Album("Hail To The Thief", 2003);
-    var ok = new Album("OK Computer", 1997);
-    var bends = new Album("The Bends", 1995);
-
-    document.getElementById("demo").innerHTML =
-"My favorite album is " + hail.name + ". It came out in " + hail.year;
-         
-        </script>
-        
-         <button type="button" onclick="greetUser()">Hello</button>
-        
+ 
       <style>
         body{
         background-color: #ABEBC6;
