@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <p><b>The Discography of the band RadioHead consists of these albums:</b></p>    
+        <p id="result">
+        <p id="number">   
+        <p id="array">
+        
+            
+        <script>
+            var discog = ["Pablo Honey", " The Bends", " OK Computer", " Kid A", " Amnesiac", " Hail To The Thief", " In Rainbows", " The King of Limbs", " A Moon Shaped Pool"];
+                                               
+          
+            
+             // Check browser support
+            if (typeof(Storage) !== "undefined") {
+                // Store array as a string with JSON
+                localStorage.setItem("discography", JSON.stringify(discog));
+                // Retrieve
+                document.getElementById("result").innerHTML = localStorage.getItem("discography");
+            } else {
+                document.getElementById("result").innerHTML = "Sorry, your browser does not support...";
+            }
+           
+            // Turn string back into array
+            var retrieved = localStorage.getItem("discography");
+            var discog2 = JSON.parse(retrieved);
+            
+             var fetch = localStorage.getItem("members");
+            var members2 = JSON.parse(retrieved);
+        
+        
+            document.getElementById("number").innerHTML = "There are " + discog2.length + " studio albums by RadioHead.";
+           
+            document.getElementById("array").innerHTML = "<b>This is how it appears after we change it back into an array:</b> <br />" + discog2;
+            
+            
+           
+            
+        </script>
+
+    </body>
+</html>
