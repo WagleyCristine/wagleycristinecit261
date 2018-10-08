@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		
+		<title>
+			Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
+		</title>
+	</head>
+	<body>
+		<header>
+          <strong> CIT 261 JavaScript - Loops and Arrays </strong>
+		</header>
+		
+	       <script>
+			function forLoop()
+               {
+                   var members = ['Thom Yorke','Jonnie Greenwood','Colin Greenwood','Ed OBrien','Phil Sellway'];
+                   
+                   var string1 = [];
+                   
+                   for(i = 0; i < members.length; i++)
+                       {
+                           string1.push(members[i]);
+                           document.getElementById("loop").innerHTML += string1[i] + "<br>";
+                       }
+                   document.getElementById("loopBtn").style = "display:none;";
+                   document.getElementById("openList").style = "display:inline;";
+                   document.getElementById("closeList").style = "display:inline;";
+               }
+            function openList()
+               {
+                   document.getElementById("loop").style = "display:block;";
+               }
+            function closeList()
+               {
+                   document.getElementById("loop").style = "display:none;";
+               }
+                   
+               
+		   </script>
+		<br>
+		<h2>For Loop</h2>
+            The for loop displays the names of the band members in the band RadioHead.<br>
+            <button id="openList" style="display:none;" onclick="openList()">Open List</button><button id="closeList" style="display:none;" onclick="closeList()">Close List</button>
+            <div id="loop"></div><button onclick="forLoop()" id="loopBtn">Show Band Members</button>
+            
+	
+	</body>
+</html>
