@@ -8,10 +8,11 @@
     <h1>Examples of Code Topics</h1>
     
     <!--This is my example of an object-->
-  <strong>Simple Object</strong>
-  
+<H2>Simple Object</H2>
+  <strong> The name that displays is an example of a simple object.</strong>
+    
   <p id= "sample"></p>
-  <h2> The name that displays is an example of a simple object</h2>
+  
   <script>
     var person = {
    firstName : "Thom",
@@ -23,24 +24,23 @@
     
     
     <!--Example of a Function-->
-
-  
+<H2>Function</H2>
+  <strong> Clicking the button will prompt user to interact, this uses a function to greet the user with a simple message</strong>
   <script type="text/javascript">
 function greetUser() {
-    // This line prompts the user to type in his name.
-    var name = window.prompt("Please enter your name");
-    // Create a personalized greeting for the user.
+    var name = window.prompt("Please enter your name"); 
     var greeting = "Hi there " +  name  + ", have you heard of Radiohead?.";
-    // The next line causes the computer to display
-    // a greeting to the user in a popup window.
+   
     window.alert(greeting);
 }
 </script>
-  
+    
+  <button type="button" onclick="greetUser()">Hello</button>
+    
   <!--Example of a Method --> 
   
-  
- 
+<H2>Method</H2>
+    <strong> The method performs a simple mathmatical equation that outputs the number of years this band has been playing together.</strong>
   <p id="test"></p>
   <script>
     function radiohead (name, age){
@@ -67,7 +67,10 @@ function greetUser() {
     
       <body>
         
- <!-- Example of Inheritance and Instantiation -->      
+ <!-- Example of Inheritance and Instantiation -->
+          
+<H2>Inheritance and Instantiation</H2>
+    <strong> This example pulls from a funtion called album. The names of the albums are put in as instances and inherit all of the methods and properties of the original function. This shows a simple use of inheritance and instantiation</strong>      
        
   <p id = "demo"></p>
       <script>
@@ -84,7 +87,7 @@ function greetUser() {
          
         </script>
         
-         <button type="button" onclick="greetUser()">Hello</button>
+         
         
       <style>
         body{
