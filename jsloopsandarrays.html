@@ -42,19 +42,21 @@
 		   </script>
 		<br>
 		<h2>For Loop</h2>
-            The for loop displays the names of the band members in the band RadioHead.<br> An array is used for listing the members in the code.<br>
+            The for loop displays the names of the band members in the band RadioHead.<br> 
+		An array is used for listing the members in the code.<br>
             <button id="openList" style="display:none;" onclick="openList()">Open List</button>
             <button id="closeList" style="display:none;" onclick="closeList()">Close List</button>
             <div id="loop"></div><button onclick="forLoop()" id="loopBtn">Show Band Members</button>
             
 
         <h2>While Loop</h2>
-        This example uses a while loop to continue to output the message.<br> I have it set to loop while the variable is = ot less than 3. 
+        This example uses a while loop to continue to output the message with increasing numbres as long as the contition is true.<br>
+		I have it set to loop while the variable is equal to or less than 3. 
            <script>
                    var hits = 1          
                    while (hits <= 3){
                   document.write("<p> RadioHead has had some # " + hits +" hits on billboard charts. </p>");
-                    x++;
+                    hits++;
                }
 
         
