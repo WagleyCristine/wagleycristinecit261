@@ -1,11 +1,16 @@
+<!DOCTYPE HTML>
 <html>
-    <body>
-        <p><b>The Discography of the band RadioHead consists of these albums:</b></p>    
+  <head>
+  <meta charset="UTF-8">
+         
+        <H2>JSON</H2> 
+      <strong>This list shows how something is typed in using JSON. Using JSON makes it easier to share the information across different programming languages. This is a list of the albums by the band RadioHead.</strong>
+      
         <p id="result">
         <p id="number">   
         <p id="array">
-        
             
+           
         <script>
             var discog = ["Pablo Honey", " The Bends", " OK Computer", " Kid A", " Amnesiac", " Hail To The Thief", " In Rainbows", " The King of Limbs", " A Moon Shaped Pool"];
                                                
@@ -18,7 +23,7 @@
                 // Retrieve
                 document.getElementById("result").innerHTML = localStorage.getItem("discography");
             } else {
-                document.getElementById("result").innerHTML = "Sorry, your browser does not support...";
+                document.getElementById("result").innerHTML = "Something went wrong...";
             }
            
             // Turn string back into array
@@ -31,17 +36,17 @@
         
             document.getElementById("number").innerHTML = "There are " + discog2.length + " studio albums by RadioHead.";
            
-            document.getElementById("array").innerHTML = "<b>This is how it appears after we change it back into an array:</b> <br />" + discog2;
+            document.getElementById("array").innerHTML = discog2;
             
                  
         </script>
-            
+         <br><strong>This is how it appears after we change in back into an array.</strong>   
             <style>
         body{
         background-color: #ABEBC6;
         text-align: center;
         }
         </style>
-
+    <body>
     </body>
 </html>
