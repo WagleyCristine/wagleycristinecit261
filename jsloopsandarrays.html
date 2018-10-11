@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
-  <html>
-  <head>
-  <meta charset="UTF-8">
+<html>
+	<head>
+		<meta charset="UTF-8">
 		
 		<title>
 			Loops, Conditional Statements, Functions, Variables, Parameters, Arrays, Associative Arrays
@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<header>
-          <H1> CIT 261 JavaScript - Loops and Arrays </H1>
+          <strong> CIT 261 JavaScript - Loops and Arrays </strong>
 		</header>
 		
 	       <script>
@@ -41,13 +41,24 @@
 		   </script>
 		<br>
 		<h2>For Loop</h2>
-            The for loop displays the names of the band members in the band RadioHead.<br>
-		
+            The for loop displays the names of the band members in the band RadioHead.<br> An array is used for listing the members in the code.<br>
             <button id="openList" style="display:none;" onclick="openList()">Open List</button>
-	    <button id="closeList" style="display:none;" onclick="closeList()">Close List</button>
+            <button id="closeList" style="display:none;" onclick="closeList()">Close List</button>
             <div id="loop"></div><button onclick="forLoop()" id="loopBtn">Show Band Members</button>
             
-	 <style>
+
+        <h2>While Loop</h2>
+        This example uses a while loop to continue to output the message.<br> I have it set to loop while the variable is = ot less than 3. 
+           <script>
+                   var x = 1          
+                   while (x <= 3){
+                  document.write("<p> RadioHead has had some # " + x +" hits on billboard charts. </p>");
+                    x++;
+               }
+
+        
+           </script>
+	      <style>
         body{
         background-color: #ABEBC6;
         text-align: center;
