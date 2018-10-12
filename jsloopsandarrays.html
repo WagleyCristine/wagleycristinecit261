@@ -51,7 +51,8 @@
 
         <h2>While Loop</h2>
         This example uses a while loop to continue to output the message with increasing numbers as long as the contition is true.<br>
-		I have it set to loop while the variable is equal to or less than 3. 
+		I have it set to loop while the variable is equal to or less than 3. This also shows an example of a conditional 
+		statement in the code (hits<= 3) is the condition.  
            <script>
                    var hits = 1          
                    while (hits <= 3){
@@ -61,6 +62,16 @@
 
         
            </script>
+		<h2>Associative Array</h2>
+		Associative arrays are basically objects in javaScript. A typical array is an ordered list that uses the number place of a list
+		list to reference how it should be output. The associative array is more of an unordered list and can use text to place of numb
+		to reference how the information is output to the user. 
+	   <script>
+        var jonny = { name: 'Jonny Greenwood', instrument: 'guitar and keyboard', age: 46};
+
+        document.write(jonny.name + " plays the " + jonny.instrument + " in the band RadioHead, and he is " + jonny.age + " years old.")
+      </script>
+		
 	      <style>
         body{
         background-color: #ABEBC6;
