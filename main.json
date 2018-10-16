@@ -5,7 +5,7 @@
     "sales": "1.7 Mill"
       
     }
-  },
+  
   
     {
     "name": "The Bends",
@@ -14,11 +14,11 @@
       
     }
   
-  },
+  
   {
     "name": "OK Computer",
     "year" : "1997",
     "sales": "3.4 Mill"
     }
-  }
+  
 ]
