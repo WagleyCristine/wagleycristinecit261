@@ -1,0 +1,24 @@
+[
+  {
+    "name": "Kid A",
+    "year" : "2000",
+    "sales": "1.5 Mill"
+      
+    
+  },
+  
+    {
+    "name": "Amnesiac",
+    "year" : "2001",
+    "sales": "1.02 Mill"
+      
+    
+  
+  },
+  {
+    "name": "Hail to the Thief",
+    "year" : "2003",
+    "sales": "1.14 Mill"
+    
+  }
+]
