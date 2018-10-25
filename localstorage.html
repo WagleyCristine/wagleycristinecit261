@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8"> 
+      <h1>Local Storage</h1>
+       <p> Local Storage is used in key,value pairs and stores data locally in the browser settings.<br> This information stays even after a window is closed and has to be manually removed. </p>
+    </head>
+       <body onload ="load()">
+       <h2>Storing Data</h2><br>
+           
+           In this first example the user can enter whatever they like and once the choose to save the information it will me entered into the localStorage.<br> This stores the information until it is manually removed, even if the window is closed out and reopened. To view any of this<br> information in local storage click F12 and use the developer tools to view local storage. The remove button on the first example removes one specific item. 
+           <p id = "show"></p>   
+       <script>
+         function save() {
+            var fieldValue = document.getElementById ('textfield').value;
+            localStorage.setItem('text', fieldValue); 
+             
+         }
+           
+           
+            function load(){
+               var storedValue = localStorage.getItem('text');
+               if (storedValue){
+                   document.getElementById('textfield').value = storedValue;  
+               }   
+               } 
+           
+           function display(fieldValue){
+               var show = document.getElementById("show");
+               var x = localStorage.getItem(fieldValue);
+               show.innerHTML = "Its " + fieldValue;
+           }
+           
+         function remove () {
+              document.getElementById('textfield').value = '';
+              localStorage.removeItem('text');
+         }
+      </script>
+        <input type ="text" id = "textfield"/>
+        <input type ="button" value= "Save" onclick = "save()"/>
+        <input type="button" value="Remove" onclick="remove()"/>
+    </body>
+ 
+       <h2>Retrieving Data</h2>
+    In this example information has been saved into the local storage and can be loaded for the user<br> to view after clicking the save button and then the load button. Notice if you try to load first the information <br> will not come up. This is set into code as an object and upon clicking the save button it will save that object <br> to your local storage. 
+       
+       <p id="nameB">Name</p>
+       <p id="band">Band</p>
+       <p id="instrument">Instrument</p>
+        
+       <button type="button" id="saveObject" onclick= saveAssocArray()>Save Object</button>
+       <button type="button" id="loadObject" onclick= loadObject()>Load Object</button>
+       
+              <script>
+          var assocArray; 
+ 
+          function saveAssocArray() {
+             assocArray = {name: "nameB", band: "band", instrument: "instrument"}; 
+             assocArray.name = "Thom";
+             assocArray.band = "RadioHead";
+             assocArray.instrument = "Singer";
+ 
+             
+             localStorage.setItem("object", JSON.stringify(assocArray));  
+          }
+ 
+          function loadObject() {
+             assocArray = JSON.parse(localStorage.getItem("object")); // parse gets data from string
+             document.getElementById("nameB").innerHTML = "Name: " + assocArray.name;
+             document.getElementById("band").innerHTML = "Band: " + assocArray.band;
+             document.getElementById("instrument").innerHTML = "Instrument: " + assocArray.instrument;
+          }
+       </script>
+    
+    <h2>Array</h2>
+            An array is used and saved through the local storage in this example.<br> Save the list to see it appear in local storage. The clear button <br> on this example will clear all of the pages information from local storage.  <br> 
+		<br>
+            <script>
+                
+             function saveList(){
+                members = ['Thom Yorke','Jonnie Greenwood','Colin Greenwood','Ed OBrien','Phil Sellway']; 
+            
+            localStorage.setItem("members", JSON.stringify(members));
+             }
+           function loadArray() {
+            members = JSON.parse(localStorage.getItem("members"));
+            }
+        </script>
+<br>
+		
+            
+            <button type="button" id="saveList" onclick = saveList()>Save List</button>
+        
+            <button type="button" id="clear" onclick = localStorage.clear()>Clear</button>
+        
+        <style>
+        body{
+        background-color: #ABEBC6;
+        text-align: center;
+        }
+        </style>
+    
+    
+        
+
+</html>
