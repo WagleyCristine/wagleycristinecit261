@@ -1,0 +1,26 @@
+{
+-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#bandImage {
+  position:relative;
+  height:281px;
+  width:450px;
+  margin:0 auto;
+
+}
+
+#bandImage img {
+  position: absolute;
+  left:0; -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+
+#bandImage img.new:hover {
+opacity: 0;
+box-shadow: 10px 10px 5px #888888;
+}
