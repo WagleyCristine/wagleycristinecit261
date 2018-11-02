@@ -1,0 +1,23 @@
+#box1 {
+	background: #9DCEFF;
+	width: 200px;
+	height: 50px;
+	overflow: hidden;
+}
+h3 {
+    animation: type 3s steps(30);
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: consolas;
+    border-right: 4px solid black;
+    width: 30ch;
+}
+@keyframes type {
+    0%{
+
+width: 0ch;
+    }
+    100% {
+        width: 30ch;
+    }
+  
