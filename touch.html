@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h1>Javascript Event touchstart </h1>
+    <h2>Touch the band name below for some Bio information. </h2>
+    <strong> This example is for touch devices only. Unfortunatly you cannot test it on a computer.</strong>
+
+<p id="bio">RadioHead</p>
+
+    
+
+<p id="touchdemo"></p>
+
+<script>
+document.getElementById("bio").ontouchstart = myFunction;
+
+function myFunction() {
+  document.getElementById("touchdemo").innerHTML = "Radiohead are an English rock band from Abingdon, Oxfordshire, formed in 1985. The band consists of Thom Yorke (vocals, guitar, piano, keyboards), brothers Jonny Greenwood (lead guitar, keyboards, other instruments) and Colin Greenwood (bass), Ed O'Brien (guitar, backing vocals) and Philip Selway (drums, percussion). They have worked with producer Nigel Godrich and cover artist Stanley Donwood since 1994. (bio from Wikipedia)";
+}
+</script>
+   <style>
+        body{
+        background-color: #ABEBC6;
+        text-align: center;
+        }
+        </style>
+</body>
+</html>
