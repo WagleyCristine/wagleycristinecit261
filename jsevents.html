@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Event onLoad</h1>
+<h2>This example uses the onload feature through the addEventListener. <br>
+  The page begins to load and as the browser scans it recognizes that it should load <br>
+  the image last, or after everything has loaded. </h2>
+
+
+
+<img id = "cutePup" src ="images/cutepup.jpg" style = "max-width:30%;">
+
+<script>
+cutePup.addEventListener("load", function(){
+  alert("Look at the cute puppy!");
+});
+
+</script>
+
+<h1>Javascript Event touchstart </h1>
+    <h2>Touch the band name below for some Bio information. This uses the ontouchstart to load the data. </h2>
+    <strong> This example is for touch devices only. Unfortunatly you cannot test it on a computer.</strong>
+
+<p id="bio">RadioHead</p>
+<p id="touchdemo"></p>
+
+<script>
+document.getElementById("bio").ontouchstart = myFunction;
+
+function myFunction() {
+  document.getElementById("touchdemo").innerHTML = "Radiohead are an English rock band from Abingdon, Oxfordshire, formed in 1985. The band consists of Thom Yorke (vocals, guitar, piano, keyboards), brothers Jonny Greenwood (lead guitar, keyboards, other instruments) and Colin Greenwood (bass), Ed O'Brien (guitar, backing vocals) and Philip Selway (drums, percussion). They have worked with producer Nigel Godrich and cover artist Stanley Donwood since 1994. (bio from Wikipedia)";
+}
+</script>
+
+
+<h1>Javascript Event onclick </h1>
+    <h2>Click the band name below for some Bio information. </h2>
+    <strong> This example is the same as above but using the onclick function rather than the ontouchstart function. Now you can see the bio info with a click on a computer.</strong>
+
+<p id="bio">RadioHead</p>
+<p id="clickDemo"></p>
+
+<script>
+document.getElementById("bio").onclick = myFunction;
+
+function myFunction() {
+  document.getElementById("clickDemo").innerHTML = "Radiohead are an English rock band from Abingdon, Oxfordshire, formed in 1985. The band consists of Thom Yorke (vocals, guitar, piano, keyboards), brothers Jonny Greenwood (lead guitar, keyboards, other instruments) and Colin Greenwood (bass), Ed O'Brien (guitar, backing vocals) and Philip Selway (drums, percussion). They have worked with producer Nigel Godrich and cover artist Stanley Donwood since 1994. (bio from Wikipedia)";
+}
+</script>
+
+
+<style>
+body{
+      background-color: #ABEBC6;
+      text-align: center;
+      }
+      </style>
+</body>
+</html>
