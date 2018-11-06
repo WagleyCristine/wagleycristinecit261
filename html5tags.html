@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  <h1>Canvas Tag</h1>
+  <h2> This first example uses the canvas tag in HTML5. I have <br> created a simple shape.
+    This can also be used with animations <br> and for making charts and much more. <h2>
+
+<canvas id="canvas" width="400px" height="400px">If you can see this then your browser is not awesome enough to view my cool shape.</canvas>
+
+<script>
+
+var shape = document.getElementById("canvas").getContext('2d');
+
+shape.beginPath();
+shape.arc(200, 200, 100, 0, 2*Math.PI);
+shape.fillStyle = "#FF0000";
+shape.fill();
+shape.clearRect(175, 200, 50, 90);
+
+shape.lineWidth = 10;
+shape.strokeStyle = "#ff6666";
+shape.stroke();
+</script>
+
+
+<h1>Video Tag</h1>
+<h2>This example uses the video tag for HTML5. This is a <br> video of my
+  son riding his tricycle or at least trying to.<br> I linked the files in
+  by putting them into folders and <br> sourcing them into my code.</h2>  <br>
+
+
+<video width="320" height="240" controls src="bikeride.mp4">
+
+</video><br><br>
+
+<h1>Audio Tag</h1>
+<h2> This example shows how the audio tag is used <br> in HTML5. Here I have a
+  song by the band <br> Blonde Redhead. Please click play and enjoy. <br><br>
+
+<audio src="silently.mp3" controls>
+
+  <style>
+          body{
+          background-color: #ABEBC6;
+          text-align: center;
+          }
+          </style>
+</body>
+</html>
