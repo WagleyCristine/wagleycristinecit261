@@ -1,0 +1,91 @@
+<html>
+    <head>
+
+    <h1> Transitions 2</h1>
+        <h2>This first example uses a transition effect to enable hovering
+        over a thumbnail to view the image larger. This is an image of the
+      band RadioHead playing a live show.</h2>
+
+    <style>
+
+        body{
+          background-color: #ABEBC6;
+
+        }
+
+    div{
+    width: 75px;
+    height: 75px;
+    padding: 25px;
+    background: #ff5c33;
+    text-align: justify;
+    position: relative;
+    top: 60%;
+    left: 45%;
+    border-radius: 200px;
+    transition: all ease 3s;
+
+    }
+        div:hover{
+            top: 10%;
+            background: #ffff1a;
+            box-shadow: 0 0 30px 20px #ff9933;
+        }
+
+ .image{
+  width:50px;
+  height:50px;
+}
+.imagebig{
+  position: absolute;
+  width:0px;
+  -webkit-transition:width 0.3s linear 0s;
+  transition:width 0.3s linear 0s;
+  z-index:10;
+}
+.image:hover + .imagebig{
+  width:400px;
+}
+
+figure#colorBox {
+    background: #00bfff;
+	width: 200px;
+	height: 100px;
+    position:relative;
+}
+        </style>
+
+    </head>
+
+  <script>
+function changeBG(el,clr){
+	var elem = document.getElementById(el);
+	elem.style.transition = "background 2.0s linear 0s";
+	elem.style.background = clr;
+}
+</script>
+
+
+
+
+<body>
+
+<img class="image" src="images/radioheadlivesmall.jpg" alt="band">
+<img class="imagebig" src="images/radioheadlive.jpg" alt="band"><br><br>
+<h2> This next example is a color changing box. Click the different buttons
+  to see the color gradually change.<br> The last example is beneath that. It is a
+  shape that transitions to a new color and border upon hovering. It also
+  moves on the page. Hover your mouse over the
+  circle to see the rising sun. It also uses a JavaScript function to execute
+  the change.</h2>
+
+       <div>
+          hover here to see the sun rise. </div>
+
+    </body>
+<button onclick="changeBG('colorBox','#ff0000')">Red</button>
+<button onclick="changeBG('colorBox','#ffff00')">Yellow</button>
+<button onclick="changeBG('colorBox','#00bfff')">Blue</button>
+<figure id="colorBox">Here is a box. You can change the color by clicking the buttons. Have fun!!</figure>
+
+</html>
