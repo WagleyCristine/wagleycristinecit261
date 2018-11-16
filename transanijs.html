@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <h1>CSS Animations and Transitions With JavaScript</h1>
+    <h2> Here are three examples of how animations, transitions and transforms can be used with JavaScript. The neon rain uses an animation and is rotated using transform. The glowing is executed through a JavScript function. The background is set so that the user can alter the background color behind the animation. This is also executed through JavaScript and the colors are set to transition from one to the next. The record spins using a transform rotate function through JavaScript. </h2>
+    
+    
+<style>
+div { background: #000;
+   
+    }
+.bar {
+  width: 5px;
+  height: 60px;
+  display: inline-block;
+  margin: 10px 10px;
+  border-radius: 50% 20px;
+  transform:rotate(25deg); 
+}
+.bar:nth-child(odd) {
+  background: #cc0000;
+  opacity: 1;
+  box-shadow: 2px 1px 15px #cc0000, -2px -1px 15px #cc0000;
+  animation: bar-pulse-1 1s linear 0s infinite alternate;
+}
+.bar:nth-child(even) {
+  background: #009933;
+  opacity: .3;
+  box-shadow: none;
+  animation: bar-pulse-2 1s linear 0s infinite alternate;
+}
+
+@keyframes bar-pulse-1 {
+  from {box-shadow: 2px 1px 15px #cc0000, -2px -1px 15px #cc0000; opacity: 1; }
+  to {box-shadow: none; opacity: .3; }
+}
+  @keyframes bar-pulse-2 {
+    from {box-shadow: none; opacity: .3; }
+    to {box-shadow: 2px 1px 15px #009933, -2px -1px 15px #009933; opacity: 1; }
+
+}
+  
+
+</style>
+</head>
+<body>
+  <div id="lights"> </div>
+    <script>
+for (var i=0; i < 73; i++){
+  var bar = document.createElement ("div");
+  bar.className = "bar";
+  document.getElementById ("lights").appendChild(bar);
+}
+        function changeBG(el,clr){
+	var elem = document.getElementById(el);
+	elem.style.transition = "background 2.0s linear 0s";
+	elem.style.background = clr;
+}
+
+  
+    </script>
+ <br>   
+<button onclick="changeBG('lights','#ffffff')">White</button>
+<button onclick="changeBG('lights','#ffff00')">Yellow</button>
+<button onclick="changeBG('lights','#0000cc')">Blue</button><br>
+   
+ 
+   <br><strong> You can change the background color by clicking the buttons. Have fun!!</strong><br><br><br><br><br><br><br><br><br>
+   <script> 
+    var looper;
+var degrees = 0;
+function spinRecord(el,speed){
+	var elem = document.getElementById(el);
+    elem.style.transform = "rotate("+degrees+"deg)";
+	looper = setTimeout('spinRecord(\''+el+'\','+speed+')',speed);
+	degrees++;
+	if(degrees > 359){
+		degrees = 1;
+	}	
+    }
+</script>
+<strong>Enjoy the Spinning Record.</strong>
+<body>
+<img id="img1" src="images/record2.png" alt="record2">
+<script>spinRecord("img1",35);</script>
+    </body>
+    </html>
