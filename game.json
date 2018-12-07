@@ -1,11 +1,17 @@
 [
   {
     "how": "Click on a card to reveal the picture.",
+    
     "how2" : "Click another card to see if it matches.",
-    "how3": "If not match cards will flip back over."
-    "how4": "If match cards remain face up."
-    "how5": "Repeat process until all cards have a match."
-    "how6": "Once you finsh click the shuffle button to play again!"
+    
+    "how3": "If not match cards will flip back over.",
+    
+    "how4": "If match cards remain face up.",
+    
+    "how5": "Repeat process until all cards have a match.",
+    
+    "how6": "Once you finsh click the shuffle button to play again!",
+    
     "object": "Have Fun!"
       
     }
