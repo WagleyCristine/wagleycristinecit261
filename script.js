@@ -65,8 +65,4 @@ function resetBoard() {
 
 cards.forEach(card => card.addEventListener('click', flipCard));
 
-function removeOverlay() {
-   var = divO = document.getElementsByClassName("overlay");
-    divO.parentNode.removeChild(divO);
-    
-}
+
