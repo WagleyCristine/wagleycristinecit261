@@ -49,7 +49,7 @@
               localStorage.removeItem('text');
          }
       </script>
-       <button type="submit" id="shufflebtn" onClick="refreshPage()">Shuffle Cards</button>
+      <div> <button type="submit" id="shufflebtn" onClick="refreshPage()">Shuffle Cards</button></div>
     
     
    
@@ -115,8 +115,9 @@
 
    
     
-    <div id = "comment"> <textarea id = "textfield"></textarea><br><br>
-           <input type ="button" id= "save" value= "Save" onclick = "save()"/></div>
+    <div id = "comment"> <textarea id = "textfield"  placeholder="Leave us a short message here if you liked the game.">
+      </textarea><br><br>
+      <input type ="button" id= "save" value= "Save" onclick = "save()"/></div>
     
   <script src="script.js"></script>
   <script src="game.js"></script>
