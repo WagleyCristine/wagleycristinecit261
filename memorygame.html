@@ -8,74 +8,133 @@
   <link rel="stylesheet" href="gamestyle.css">
     <h1></h1>
     <div class="container">
-        <button onclick ="removeOverlay(this)">Let's Play!!</button> <br />
+        
+      <!-- <button onclick="removeOverlay('overlay-text');">Close the Box</button> -->
         <div class ="overlay-text visible" >Click to Start</div></div>
     
-    <section class="text">
+    <header id = "starter">
+        <div id="game-instruct"></div>
+    <div><button id="btn">Press Button for Instructions</button></div>
         
-        
-        <h3>Welcome to my memory game. Try to match all the cards to win. Good Luck!!</h3></section>
+    </header>
     
-</head>
+    <section class="text"> 
+        <h3>Welcome to my memory game.</h3></section>
+    
+  
+      <p id = "show"></p>   
+       <script>
+         function save() {
+            var fieldValue = document.getElementById ('textfield').value;
+            localStorage.setItem('text', fieldValue); 
+             
+         }
+           
+           
+            function load(){
+               var storedValue = localStorage.getItem('text');
+               if (storedValue){
+                   document.getElementById('textfield').value = storedValue;  
+               }   
+               } 
+           
+           function display(fieldValue){
+               var show = document.getElementById("show");
+               var x = localStorage.getItem(fieldValue);
+               show.innerHTML = "Its " + fieldValue;
+           }
+           
+         function remove () {
+              document.getElementById('textfield').value = '';
+              localStorage.removeItem('text');
+         }
+      </script>
+       <button type="submit" id="shufflebtn" onClick="refreshPage()">Shuffle Cards</button>
+    
+    
+   
+   
 <body>
+    
             
   <section class="game">
     <div class="card" data-framework="carda">
       <img class="front" src="images/carda.jpg" alt="carda" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
     <div class="card" data-framework="carda">
       <img class="front" src="images/carda.jpg" alt="carda" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
 
     <div class="card" data-framework="cardb">
-      <img class="front" src="images/cardb.JPG" alt="cardb" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="front" src="images/cardb.jpg" alt="cardb" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
     <div class="card" data-framework="cardb">
-      <img class="front" src="images/cardb.JPG" alt="cardb" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="front" src="images/cardb.jpg" alt="cardb" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
 
     <div class="card" data-framework="cardc">
-      <img class="front" src="images/cardc.JPG" alt="cardc" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="front" src="images/cardc.jpg" alt="cardc" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
     <div class="card" data-framework="cardc">
-      <img class="front" src="images/cardc.JPG" alt="cardc" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="front" src="images/cardc.jpg" alt="cardc" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
 
     <div class="card" data-framework="cardd">
-      <img class="front" src="images/cardd.JPG" alt="cardd" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="front" src="images/cardd.jpg" alt="cardd" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
     <div class="card" data-framework="cardd">
-      <img class="front" src="images/cardd.JPG" alt="cardd" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="front" src="images/cardd.jpg" alt="cardd" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
 
     <div class="card" data-framework="carde">
-      <img class="front" src="images/carde.JPG" alt="carde" />
-      <img class="back" src="images/cardface.JPG" alt="carde" />
+      <img class="front" src="images/carde.jpg" alt="carde" />
+      <img class="back" src="images/cardface.jpg" alt="JS Badge" />
     </div>
     <div class="card" data-framework="carde">
-      <img class="front" src="images/carde.JPG" alt="carde" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="front" src="images/carde.jpg" alt="carde" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
 
     <div class="card" data-framework="cardf">
-      <img class="front" src="images/cardf.JPG" alt="cardf" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="front" src="images/cardf.jpg" alt="cardf" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
     <div class="card" data-framework="cardf">
-      <img class="front" src="images/cardf.JPG" alt="cardf" />
-      <img class="back" src="images/cardface.JPG" alt="cardface" />
+      <img class="front" src="images/cardf.jpg" alt="cardf" />
+      <img class="back" src="images/cardface.jpg" alt="cardface" />
     </div>
   </section>
 
+   
+    
+    <div id = "comment"> <textarea id = "textfield"></textarea><br><br>
+           <input type ="button" id= "save" value= "Save" onclick = "save()"/></div>
+    
   <script src="script.js"></script>
-    <script src="script2.js"></script>
+  <script src="game.js"></script>
+    
+    <script>
+function refreshPage(){
+    window.location.reload();
+} 
+</script>
+    
+   <!--   <script>
+        function removeOverlay() {
+   document.getElementsByClassName("overlay-text").style.display = "none";
+} 
+    </script> -->
+       
 </body>
+    <footer>
+    
+     </footer>
 </html>
